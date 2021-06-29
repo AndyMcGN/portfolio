@@ -40,11 +40,6 @@
     top: 40px;
     animation: sceneRotate 20s infinite linear;
 
-    @keyframes travelScreenDown {
-        0% {top: -100%;}
-        100% {top: 100%}
-
-    }
     
     .cube {
         transform: rotate3d(0, 1, 0.5, 3rad);
@@ -92,6 +87,34 @@
 
 }
 
+.explodedCube {
+
+    left:300px;
+    top: 550px;
+    animation: explodedCubeRotate 7s infinite linear;
+    transform-origin: center;
+    @keyframes explodedCubeRotate {
+        from {transform: rotate3d(0, 1, 0.5, 0turn)} 
+        to {transform: rotate3d(1, 1, 0.5, -1turn)}    }
+
+    
+
+    .side {
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+    }
+    .front  { transform: translateZ(1em); background-image: url('../images/githublogo.JPG');}
+    .top    { transform: rotateX( 90deg)  translateZ(1em); background-image: url('../images/bootstraplogo.JPG');}
+    .right  { transform: rotateY( 90deg)  translateZ(1em); background-image: url('../images/sasslogo.png');}
+    .left   { transform: rotateY(-90deg)  translateZ(1em); background-image: url('../images/pythonlogo.png');}
+    .bottom { transform: rotateX(-90deg)  translateZ(1em); background-image: url('../images/djangologo.png');}
+    .back   { transform: rotateY(-180deg) translateZ(1em); background-image: url('../images/mysqllogo.png');}
+
+}
+
+
+
 .pyramidAnimationBox {
     transform-style: preserve-3d;
     position: absolute;
@@ -133,7 +156,7 @@
 
 .sphere {
     border-radius: 50%;
-background: radial-gradient(white 0%, transparent 40%);
+    background: radial-gradient(white 0%, transparent 40%);
     height: 2em;
     width: 2em;
     animation: pulse infinite 3s linear, sphereTurning infinite linear 8s;
@@ -150,35 +173,7 @@ background: radial-gradient(white 0%, transparent 40%);
 
 }
 
-.sphereAnimationBox {
-    transform-style: preserve-3d;
-    position: absolute;
-    left: 300px;
-    top: 500px;
-    animation: explodedBoxAnimation 8s infinite linear;
-    transform-style: preserve-3d;
-    transform-origin: center;
-    @keyframes explodedBoxAnimation {
-        to { transform: rotate3d(0, 1, .2, -1turn);}
-        }
 
-    .explodingBoxSide {
-        position: absolute;
-        width: 1em;
-        height: 1em;
-        background-color: red;
-        transform-origin: 0%;
-    }
-    .side1 { transform: translateZ(1em) rotateX(130deg) rotateY(130deg) }
-    // .side2 { transform: translateZ(1em) rotateX(260deg)   rotateY(260deg)}
-    // .side3 { transform: translateZ(1em) rotateX(390deg)  rotateY(390deg)}
-    // .side4 { transform: translateZ(1em) rotateX(520deg) rotateY(520deg) }
-    // .side5 { transform: translateZ(1em) rotateX(650deg)  rotateY(650deg)}
-    // .side6 { transform: translateZ(1em) rotateX(780deg)  rotateY(780deg)}
-    // .side7 { transform: translateZ(1em) rotateX(910deg)  rotateY(910deg)}
-    // .side8 { transform: translateZ(1em) rotateX(1080deg)  rotateY(1080deg)}
-
-}
 
 
 

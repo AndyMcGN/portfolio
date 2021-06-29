@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './AboutSection.scss';
 
 export default function AboutSection() {
     return (
-        <div>
+        <div className="aboutSection">
             About
         </div>
     )

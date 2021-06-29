@@ -41,15 +41,13 @@ const HomeSection: React.FC<Props> = (props) => {
                 <div className="base"></div>
                 </div>
             </div>
-            <div className="sphereAnimationBox">
-                <div className="sphere"></div>
-                <div className="explodingBoxSide front"></div>
-                <div className="explodingBoxSide back"></div>
-                <div className="explodingBoxSide left"></div>
-                <div className="explodingBoxSide right"></div>
-                <div className="explodingBoxSide top"></div>
-                <div className="explodingBoxSide bottom"></div>
-
+            <div className="cubeAnimationBox explodedCube">
+                <div className="front side"></div>
+                <div className="back side"></div>
+                <div className="left side"></div>
+                <div className="right side"></div>
+                <div className="top side"></div>
+                <div className="bottom side"></div>
             </div>
 
         </div>
