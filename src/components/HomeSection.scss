@@ -1,0 +1,189 @@
+
+.homeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    font-size: 3em;
+    min-height: 100vh;
+    
+    background-color: rgb(6, 23, 29);
+    position: relative;
+  }
+
+
+
+.cubeAnimationBox {
+    transform-style: preserve-3d;
+    position: absolute;
+    .cube {
+        margin: 1.5em auto;
+        transform-style: preserve-3d;
+    }
+    .side {
+        position: absolute;
+        background-size: cover;
+    
+    }
+    transform-origin: center;
+
+}
+
+
+
+
+
+.technologyBox1 {
+
+    left:300px;
+    top: 40px;
+    animation: sceneRotate 20s infinite linear;
+
+    @keyframes travelScreenDown {
+        0% {top: -100%;}
+        100% {top: 100%}
+
+    }
+    
+    .cube {
+        transform: rotate3d(0, 1, 0.5, 3rad);
+    }
+
+    .side {
+        width: 2em;
+        height: 2em;
+    }
+    .front  { transform: translateZ(1em); background-image: url('../images/reactLogo.jpg');}
+    .top    { transform: rotateX( 90deg)  translateZ(1em); background-image: url('../images/nodejslogo.JPG');}
+    .right  { transform: rotateY( 90deg)  translateZ(1em); background-image: url('../images/html5logo.JPG');}
+    .left   { transform: rotateY(-90deg)  translateZ(1em); background-image: url('../images/JavaScriptLogo.png');}
+    .bottom { transform: rotateX(-90deg)  translateZ(1em); background-image: url('../images/csslogo.JPG');}
+    .back   { transform: rotateY(-180deg) translateZ(1em); background-image: url('../images/mongodblogo.JPG');}
+
+}
+
+.technologyBox2 {
+
+    left:900px;
+    top: 450px;
+    animation: sceneRotate 8s infinite linear;
+    transform-origin: center;
+
+    @keyframes sceneRotate {
+        to { transform: rotateY(360deg)}
+        }
+
+    
+    .cube {
+        transform: rotate3d(0, 1, 0.5, 5rad);
+    }
+
+    .side {
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .front  { transform: translateZ(.75em); background-image: url('../images/reactLogo.jpg');}
+    .top    { transform: rotateX( 90deg)  translateZ(.75em); background-image: url('../images/nodejslogo.JPG');}
+    .right  { transform: rotateY( 90deg)  translateZ(.75em); background-image: url('../images/html5logo.JPG');}
+    .left   { transform: rotateY(-90deg)  translateZ(.75em); background-image: url('../images/JavaScriptLogo.png');}
+    .bottom { transform: rotateX(-90deg)  translateZ(.75em); background-image: url('../images/csslogo.JPG');}
+    .back   { transform: rotateY(-180deg) translateZ(.75em); background-image: url('../images/mongodblogo.JPG');}
+
+}
+
+.pyramidAnimationBox {
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 1200px;
+    top: 70px;
+    animation: pyramidAnimate 8s infinite linear;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    @keyframes pyramidAnimate {
+        to { transform: rotate3d(0, 1, .2, -1turn);}
+        }
+
+    .pyramid {
+        margin: 1.5em auto;
+
+
+    }
+    .triangleSide {
+        position: absolute;
+        width: 1.4em;
+        height: 1.4em;
+        clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        background-position: top;
+        background-size: cover;
+        // opacity: .2;
+    }
+    .front { transform: rotateX(30deg) translateZ(.4em); background:#6181E8}
+    .right  { transform: rotateY( 90deg)  rotateX(30deg) translateZ(.4em); background: #6BFFFB}
+    .left   { transform: rotateY(-90deg)  rotateX(30deg) translateZ(.4em); background:#78BBFF}
+    .back   { transform: rotateY(-180deg) rotateX(30deg) translateZ(.4em); background:#61C8E8}
+    
+    .base { 
+        transform: translateY(.4em) rotateX(90deg); 
+        background: #8f8bf8; 
+        width: 1.4em;
+        height: 1.4em;
+    }
+}
+
+.sphere {
+    border-radius: 50%;
+background: radial-gradient(white 0%, transparent 40%);
+    height: 2em;
+    width: 2em;
+    animation: pulse infinite 3s linear, sphereTurning infinite linear 8s;
+
+    @keyframes pulse {
+        0% {opacity: 50%;}
+        50% {opacity: 100%;}
+        100%{opacity: 50%;}
+    }
+
+    @keyframes sphereTurning {
+        to { transform: rotate3d(0, 1, .2, 1turn);}
+        }
+
+}
+
+.sphereAnimationBox {
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 300px;
+    top: 500px;
+    animation: explodedBoxAnimation 8s infinite linear;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    @keyframes explodedBoxAnimation {
+        to { transform: rotate3d(0, 1, .2, -1turn);}
+        }
+
+    .explodingBoxSide {
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        background-color: red;
+        transform-origin: 0%;
+    }
+    .side1 { transform: translateZ(1em) rotateX(130deg) rotateY(130deg) }
+    // .side2 { transform: translateZ(1em) rotateX(260deg)   rotateY(260deg)}
+    // .side3 { transform: translateZ(1em) rotateX(390deg)  rotateY(390deg)}
+    // .side4 { transform: translateZ(1em) rotateX(520deg) rotateY(520deg) }
+    // .side5 { transform: translateZ(1em) rotateX(650deg)  rotateY(650deg)}
+    // .side6 { transform: translateZ(1em) rotateX(780deg)  rotateY(780deg)}
+    // .side7 { transform: translateZ(1em) rotateX(910deg)  rotateY(910deg)}
+    // .side8 { transform: translateZ(1em) rotateX(1080deg)  rotateY(1080deg)}
+
+}
+
+
+
+
+.homeSection h1, h3 {
+    color:rgb(67, 169, 206);
+}
+
