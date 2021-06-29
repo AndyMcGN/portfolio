@@ -1,4 +1,4 @@
-
+$homeSectionBg: rgb(6, 23, 29);
 .homeSection {
     display: flex;
     justify-content: center;
@@ -8,7 +8,8 @@
     font-size: 3em;
     min-height: 100vh;
     
-    background-color: rgb(6, 23, 29);
+    background-color: $homeSectionBg;
+    border-bottom: solid transparent 2em;
     position: relative;
   }
 
@@ -182,3 +183,31 @@
     color:rgb(67, 169, 206);
 }
 
+.transitionGradient {
+    background: linear-gradient($homeSectionBg, rgb(56, 145, 175));
+    // background-color: red;
+    height: 7em;
+    z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .homeSection {
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+    }
+
+    .technologyBox1 {
+        left: 50vw;
+        top: .25em;
+    }
+
+    .pyramidAnimationBox, .technologyBox2, .explodedCube {
+        display: none;
+
+    }
+}

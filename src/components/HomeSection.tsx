@@ -7,6 +7,7 @@ interface Props {
 
 const HomeSection: React.FC<Props> = (props) => {
     return (
+        <>
         <div className="homeSection">
             <h1>Hello, I'm Andy.</h1>
             <h3>Here is my generic portfolio page.</h3>
@@ -51,7 +52,9 @@ const HomeSection: React.FC<Props> = (props) => {
             </div>
 
         </div>
-    )
+        <div className="transitionGradient"></div>
+        </>
+        )
 }
 
 export default HomeSection;
