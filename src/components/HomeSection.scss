@@ -1,4 +1,7 @@
+@import 'base';
+
 $homeSectionBg: rgb(6, 23, 29);
+
 .homeSection {
     display: flex;
     justify-content: center;
@@ -62,8 +65,8 @@ $homeSectionBg: rgb(6, 23, 29);
 .technologyBox2 {
 
     left:900px;
-    top: 450px;
-    animation: sceneRotate 8s infinite linear;
+    top: 550px;
+    animation: sceneRotate 7s infinite linear;
     transform-origin: center;
 
     @keyframes sceneRotate {

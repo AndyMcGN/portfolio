@@ -4,7 +4,7 @@ import './AboutSection.scss';
 export default function AboutSection() {
     return (
         
-        <div className="aboutSection">
+        <div id="aboutSection">
             About
         </div>
     )
